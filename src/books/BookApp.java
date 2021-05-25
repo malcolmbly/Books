@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+import books.Book.ReverseAlphabeticalCompare;
+
 public class BookApp {
 
 	public static void main(String[] args) {
@@ -28,7 +30,15 @@ public class BookApp {
 		for (Book book : books) {
 			System.out.println(book);
 		}
-
+		System.out.println();
+		
+		ReverseAlphabeticalCompare reverseAlphabeticalCompare = new ReverseAlphabeticalCompare();
+		Collections.sort(books, reverseAlphabeticalCompare);
+		System.out.println("Books sorted by reverse alphabetical (natural) order:");
+		for (Book book : books) {
+			System.out.println(book);
+		}
+		
 	}
 
 }
